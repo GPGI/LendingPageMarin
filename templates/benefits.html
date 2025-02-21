@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Octa Investment Group</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(to bottom, #4a148c, #7b1fa2);
+            color: white;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header styles */
+        header {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 5px;
+            background-color: #07de36;
+            color: white;
+            margin-right: 15px;
+        }
+
+        .btn-primary:hover {
+            background-color: #00f936;
+        }
+
+        .btn-secondary {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px background-color: #37ff87;;
+        }
+
+        /* Features section */
+        .features {
+            padding: 80px 0;
+        }
+
+        .features h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #e1bee7;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        /* Benefits section */
+        .benefits {
+            padding: 80px 0;
+        }
+
+        .benefits h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+
+        .benefits-list {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .benefit-item i {
+            margin-right: 15px;
+            color: #e1bee7;
+        }
+
+        /* CTA section */
+        .cta {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(to right, #7b1fa2, #9c27b0);
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta {
+                margin: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero">
+            <h1>Welcome to <span style="color: #e1bee7;">Octa Investment Group</span></h1>
+            <p>The elite don't invest in the future. They own it.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary" onclick="location.href='https://literate-acorn-rw9wrrp5q4w35v9p-5000.app.github.dev/Join'">Own yours</a>
+                <a href="#" class="btn btn-secondary" onclick="location.href='https://discord.gg/rq98HShS'">Learn More</a>
+            </div>
+        </header>
+
+        <!-- Features Section -->
+        <section class="features">
+            <h2>How we dominate the real estate market</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Speed</h3>
+                    <p>We have already dealt with the piles of documentation needed for closing a deal. All you have to do is click a button</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Tokenization</h3>
+                    <p>Through blockchain based technology we have made the process reliable, transparent and most of all - secure.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-user-circle"></i>
+                    <h3>Community</h3>
+                    <p>We have managed to create a community of like-minded individuals who cooperate by pooling their resources to achieve their finanical goals with ease.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits">
+            <h2>At Octa we believe that the future should be for everyone. That's why we offer:</h2>
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Advanced analytics and reporting</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>24/7 dedicated support</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Customizable portfolios</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Regular updates and improvements</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Cross-platform compatibility</span>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Scalable infrastructure</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta">
+            <h2>The game has already changed.</h2>
+            <p>What are you waiting for? Join our ranks and be among the first to step in the new age.</p>
+            <a href="#" class="btn-primary" onclick= "location.href='https://literate-acorn-rw9wrrp5q4w35v9p-5000.app.github.dev/Join'">DOMINATE</a>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 Octa Prime. All rights to the future reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

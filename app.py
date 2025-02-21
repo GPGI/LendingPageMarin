@@ -1,19 +1,31 @@
-import os
-from flask import Flask, render_template
 
-app = Flask(__𝘯𝘢𝘮𝘦__)
+from flask import Flask, render_template
+app = Flask(__name__)
+
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('welcome-join.html')
 
-@app.errorhandler(404)
-def not_found(error):
-     return render_template('404.html'), 404
+@app.route('/contacts')
+def contacts():
+    return render_template('contacts.html')
 
-@app.errorhandler(500)
-def srever_error(error):
-    return render_template('500.html'), 500
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
-if __𝘯𝘢𝘮𝘦__ == 'main':
-    app.run(debug=True,host='127.0.0.1', port=5000)
+@app.route('/opportunities')
+def opportunities():
+    return render_template('opportunities.html')
+
+@app.route('/docs')
+def docs():
+    return render_template('documentation.html')
+
+@app.route('/Join')
+def Join():
+    return render_template('join.html')
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)

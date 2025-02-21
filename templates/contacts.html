@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Octa Prime - Classic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            background-color: #6b21a8;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+        }
+
+        .hero {
+            background-color: #6b21a8;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            background-color: #05e45e;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #05e45e;
+            color: #05e45e;
+        }
+
+        .features {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .feature-card i {
+            color: #6b21a8;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        footer {
+            background-color: #04cc54;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .form-section {
+            flex: 1;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            box-shadow: 0 4px 20px #04f96e 
+         }
+
+         @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, #fff, #e9d5ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 1.2rem 1.8rem;
+            border-radius: 15px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.07);
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input[type="email"]:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        input[type="email"]::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 1.2rem 1.8rem;
+            border-radius: 15px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.07);
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        input[type="text"]::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        input[type="textarea"] {
+            width: 100%;
+            padding: 1.2rem 1.8rem;
+            border-radius: 15px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.07);
+            color: white;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input[type="textarea"]:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        input[type="textarea"]::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .content {
+            flex: 1;
+            text-align: center;
+        }
+
+        .contact-badge {
+            display: flex;
+            align-items: center;
+            background: rgba(50, 0, 80, 0.8); /* Slightly lighter purple */
+            padding: 12px 10px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+            position: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 255, 0, 0.6);
+        }
+
+        .contact-badge span {
+            font-size: 4px;
+            font-weight: bold;
+        }
+
+        .email-bubble {
+            background: rgba(167, 29, 248, 0.9); /* Slightly lighter purple */
+            color: #d6b3ff;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: inline-block;
+            box-shadow: 0 0 10px rgba(169, 22, 171, 0.6);
+            border: 2px solid #ec27ef; /* Glowing Green Border */
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer
+        }
+
+        .email-bubble:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(201, 52, 218, 0.9);
+        }
+
+        .copied-message {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #00ff00; /* Green Success Message */
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Octa Investment Group</div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="https://literate-acorn-rw9wrrp5q4w35v9p-5000.app.github.dev/opportunities">Opportunities</a>
+                <a href="https://literate-acorn-rw9wrrp5q4w35v9p-5000.app.github.dev/about">About us</a>
+                <a href="https://literate-acorn-rw9wrrp5q4w35v9p-5000.app.github.dev/docs">Products</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Our team works tirelessly, day and night. Feel free to contact us anytime!</h1>
+            <br>
+            <div class="container">
+                <h2>💬 Ask Us Anything!</h2>
+                <p>Have a question? Send us a message, and we’ll get back to you!</p>
+                <form>
+                    <input type="text" name="name" placeholder="Name" required>
+                    <br>
+                    <br>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <br>
+                    <br>
+                    <input type="textarea" name="message" placeholder="Type your question here..." required></textarea>
+                    <br>
+                    <br>
+                    <a href="#" <button class="btn" onclick="send">Send</a>
+                    </form>
+                    <script>
+                        document.getElementById("contactForm").addEventListener("submit", async function(event) {
+                            event.preventDefault();
+                
+                            const formData = {
+                                name: this.name.value,
+                                email: this.email.value,
+                                message: this.message.value
+                            };
+                
+                            const responseMessage = document.getElementById("responseMessage");
+                
+                            try {
+                                const response = await fetch("http://localhost:5000/send-email", {
+                                    method: "POST",
+                                    headers: { "Content-Type": "application/json" },
+                                    body: JSON.stringify(formData)
+                                });
+                
+                                const result = await response.json();
+                                responseMessage.textContent = result.message;
+                            } catch (error) {
+                                responseMessage.textContent = "Error sending email. Please try again.";
+                            }
+                        });
+                    </script>
+                
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h2>You can also join our community and always be among the first to grasp the new age!</h2>
+            <br>
+            <a href="#" <button class="btn" onclick="location.href='https://discord.gg/rq98HShS'">DOMINATE</a>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>If the matter is urgent you can always write an email to</p>
+            <div class="email-bubble" onclick="copyToClipboard()">chaosstarnetwork@gmail.com</div>
+            <div class="copied-message" id="copiedMessage">Copied to clipboard!</div>
+            <script>
+                function copyToClipboard() {
+                    const email = "chaosstarnetwork@gmail.com";
+                    navigator.clipboard.writeText(email).then(() => {
+                        const message = document.getElementById("copiedMessage");
+                        message.style.display = "block";
+                        setTimeout(() => {
+                            message.style.display = "none";
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy text: ', err);
+                    });
+                }
+            </script>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Octa Investment Group. We own the future. All rights to it are reserved.</p>
+    </footer>
+</body>    
+</html>
